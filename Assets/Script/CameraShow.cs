@@ -26,7 +26,7 @@ public class CameraShow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void Call()
@@ -48,7 +48,7 @@ public class CameraShow : MonoBehaviour
     private void HangUp()
     {
         sourceImage.texture = null;
-        sourceImage.material.mainTexture = null ;
+        sourceImage.material.mainTexture = null;
         receiveImage.texture = null;
         receiveImage.material.mainTexture = null;
 
@@ -58,8 +58,7 @@ public class CameraShow : MonoBehaviour
         hangUpButton.interactable = false;
     }
 
-    #if UNITY_WEBGL
-        [DllImport("__Internal")]
-        private static extern void init(string data);
-    #endif
+
+    [DllImport("__Internal")]
+    private static extern void init(string data);
 }
